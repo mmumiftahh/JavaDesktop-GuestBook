@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="750" pageHeight="792" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3d80a7eb-f1a5-4ec7-b763-9e49d9a7831a">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tamu_keluar.`kd_tamu` AS tamu_keluar_kd_tamu,
+     tamu_keluar.`nama_tamu` AS tamu_keluar_nama_tamu,
+     tamu_keluar.`alamat` AS tamu_keluar_alamat,
+     tamu_keluar.`keperluan` AS tamu_keluar_keperluan,
+     tamu_keluar.`no_telp` AS tamu_keluar_no_telp,
+     tamu_keluar.`tanggal` AS tamu_keluar_tanggal,
+     tamu_keluar.`tanggal_keluar` AS tamu_keluar_tanggal_keluar
+FROM
+     `tamu_keluar` tamu_keluar]]>
+	</queryString>
+	<field name="tamu_keluar_kd_tamu" class="java.lang.String"/>
+	<field name="tamu_keluar_nama_tamu" class="java.lang.String"/>
+	<field name="tamu_keluar_alamat" class="java.lang.String"/>
+	<field name="tamu_keluar_keperluan" class="java.lang.String"/>
+	<field name="tamu_keluar_no_telp" class="java.lang.String"/>
+	<field name="tamu_keluar_tanggal" class="java.lang.String"/>
+	<field name="tamu_keluar_tanggal_keluar" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="223" y="16" width="219" height="35" uuid="6c95e0b3-df0e-4f50-8ab3-4726a5e93bd5"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Laporan Tamu Keluar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="51" width="196" height="20" uuid="e000844e-50e8-4a13-a169-2fe0f2b54615"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[SMK WIKRAMA Kota Bogor]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="407" y="0" width="100" height="20" uuid="b3066c71-7a21-462d-9717-1e1b09caea4b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Telepon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="789663ef-cadc-4834-bd9f-d515a5669f7a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Tamu]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="20" width="709" height="1" uuid="efd10a27-4d7e-438e-b35b-efae6d5b7018"/>
+			</line>
+			<staticText>
+				<reportElement x="610" y="0" width="100" height="20" uuid="a99bfc37-da4e-4157-8726-2b4680addee9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Keluar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="507" y="0" width="103" height="20" uuid="93e2d2e6-79b7-4de1-a230-68b9194b5777"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="91be4e06-f9fb-4813-8e17-aee3108f2623"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Masuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="107" height="20" uuid="8b85b206-03f0-4d91-bbbd-3a0ace5fd2e7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Tamu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="307" y="0" width="100" height="20" uuid="d3291543-f76b-4fbc-80bf-6a82534064a0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keperluan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="610" y="0" width="100" height="20" uuid="710c926b-d6ee-4814-8a6c-ce271c5edab6"/>
+				<textFieldExpression><![CDATA[$F{tamu_keluar_tanggal_keluar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="0" width="100" height="20" uuid="f7b08d1f-f9b0-40b6-bf29-41c6a2444d11"/>
+				<textFieldExpression><![CDATA[$F{tamu_keluar_no_telp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="507" y="0" width="103" height="20" uuid="c1ce7fa4-9652-4405-b829-0f8700a5e0b2"/>
+				<textFieldExpression><![CDATA[$F{tamu_keluar_alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="0" width="100" height="20" uuid="89c5b985-f8a9-4c83-9e0d-8d2d411349d3"/>
+				<textFieldExpression><![CDATA[$F{tamu_keluar_keperluan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="d55ba521-337f-4ca5-bee1-68199cd6399c"/>
+				<textFieldExpression><![CDATA[$F{tamu_keluar_tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="107" height="20" uuid="7fbb6b33-9c27-4466-9f4b-7d30ba38b21b"/>
+				<textFieldExpression><![CDATA[$F{tamu_keluar_nama_tamu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="a04dbda2-637f-48ab-8e28-c38ef4d359da"/>
+				<textFieldExpression><![CDATA[$F{tamu_keluar_kd_tamu}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

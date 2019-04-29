@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="650" pageHeight="842" columnWidth="610" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="835525b4-8299-4066-8971-fce72296504f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     data_tamu.`kd_tamu` AS data_tamu_kd_tamu,
+     data_tamu.`nama_tamu` AS data_tamu_nama_tamu,
+     data_tamu.`alamat` AS data_tamu_alamat,
+     data_tamu.`keperluan` AS data_tamu_keperluan,
+     data_tamu.`no_telp` AS data_tamu_no_telp,
+     data_tamu.`tanggal` AS data_tamu_tanggal
+FROM
+     `data_tamu` data_tamu]]>
+	</queryString>
+	<field name="data_tamu_kd_tamu" class="java.lang.String"/>
+	<field name="data_tamu_nama_tamu" class="java.lang.String"/>
+	<field name="data_tamu_alamat" class="java.lang.String"/>
+	<field name="data_tamu_keperluan" class="java.lang.String"/>
+	<field name="data_tamu_no_telp" class="java.lang.String"/>
+	<field name="data_tamu_tanggal" class="java.lang.String"/>
+	<group name="data_tamu_tanggal">
+		<groupExpression><![CDATA[$F{data_tamu_tanggal}]]></groupExpression>
+	</group>
+	<group name="data_tamu_nama_tamu">
+		<groupExpression><![CDATA[$F{data_tamu_nama_tamu}]]></groupExpression>
+	</group>
+	<group name="data_tamu_keperluan">
+		<groupExpression><![CDATA[$F{data_tamu_keperluan}]]></groupExpression>
+	</group>
+	<group name="data_tamu_no_telp">
+		<groupExpression><![CDATA[$F{data_tamu_no_telp}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="168" y="12" width="219" height="35" uuid="01e1a017-8b52-45f7-8778-3ea1db0bb10e"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Laporan Tamu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="47" width="196" height="20" uuid="bd318ad6-fb17-4bbb-b80b-b2dde05fabb7"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[SMK WIKRAMA Kota Bogor]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="79a2b82a-a946-496e-a540-a84dba843fe8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Tamu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="107" height="20" uuid="141cc17c-d078-4b2b-9b76-66ef1451ea81"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Tamu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="307" y="0" width="100" height="20" uuid="6e8b7c4c-9d7a-4aee-9f82-0db166643463"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keperluan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="a5b5e0b8-5e74-4cd2-8f2e-833d845c1f16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Masuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="0" width="100" height="20" uuid="710e6753-ab2c-425e-9290-c7306e8d45c9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Telepon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="507" y="0" width="103" height="20" uuid="ee447e00-2504-426e-876a-c09c483361c3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="23" width="609" height="1" uuid="e32e1aa5-a85a-488f-b494-a8e13bd3e12f"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="f466f857-2f62-4925-a310-47827fd0ff2d"/>
+				<textFieldExpression><![CDATA[$F{data_tamu_kd_tamu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="5bb3d336-7599-4b43-b19d-502cb132cb08"/>
+				<textFieldExpression><![CDATA[$F{data_tamu_tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="107" height="20" uuid="579437e0-9ad5-4716-8c92-c89418999e73"/>
+				<textFieldExpression><![CDATA[$F{data_tamu_nama_tamu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="0" width="100" height="20" uuid="d39d9f9a-58c6-4d9d-b971-6aadf733466f"/>
+				<textFieldExpression><![CDATA[$F{data_tamu_keperluan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="0" width="100" height="20" uuid="8abd65eb-db10-408a-83b0-301af277d0fc"/>
+				<textFieldExpression><![CDATA[$F{data_tamu_no_telp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="507" y="0" width="103" height="20" uuid="ee56f2a8-8ef3-4b93-b315-93fec332fd48"/>
+				<textFieldExpression><![CDATA[$F{data_tamu_alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
